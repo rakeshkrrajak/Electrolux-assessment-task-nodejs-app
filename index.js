@@ -8,6 +8,14 @@ app.get('/', function(request, response) {
   response.send('Hello World!')
 })
 
+app.get('/health', function(request, response) {
+  response.json({ status: 'healthy' })
+})
+
+app.get('/version', function(request, response) {
+  response.json({ version: process.env.GIT_COMMIT || 'dev' })
+})
+
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
 })
