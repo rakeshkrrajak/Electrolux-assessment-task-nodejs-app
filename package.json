@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "node -e \"require('./index.js'); process.exit(0)\" || true"
+    "test": "node -e \"require('./index.js'); process.exit(0)\""
   },
   "dependencies": {
     "express": "^4.13.3"
   },
   "engines": {
-    "node": "4.0.0"
+    "node": ">=18"
   },
   "repository": {
     "type": "git",
