@@ -52,7 +52,7 @@ jobs:
             ${{ secrets.DOCKERHUB_USERNAME }}/my-app:latest
 
       - name: Security scan
-        uses: aquasecurity/trivy-action@0.28.0
+        uses: aquasecurity/trivy-action@v0.28.0
         with:
           image-ref: ${{ secrets.DOCKERHUB_USERNAME }}/my-app:${{ steps.version.outputs.tag }}
           format: table
