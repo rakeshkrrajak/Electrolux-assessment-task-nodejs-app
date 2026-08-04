@@ -15,7 +15,7 @@ COPY . .
 EXPOSE 5000
 
 # Health check
-HEALTHCHECK --interval=30s --timeout=10s CMD curl -f http://localhost:5000/health || exit 1
+HEALTHCHECK --interval=30s --timeout=10s CMD wget -q -O- http://localhost:5000/health >/dev/null || exit 1
 
 # Start the app
 CMD ["npm", "start"]
